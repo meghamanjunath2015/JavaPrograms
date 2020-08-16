@@ -1,0 +1,29 @@
+OOPS: 
+
+Object oriented programming 
+
+Two building blocks are: CLASS and OBJECT 
+
+CLASS: ITs a collection of attributes and methods that define the behaviour of the object 
+object: Instance of a class 
+
+Concepts: 
+Abstraction
+Polymorphism 
+Inheritance 
+Enacapsulation 
+
+Aggregation 
+Composition 
+Association 
+
+POLYMORPHISM: Ability of an object to take on multiple forms 
+
+1. complile time / static / Method Overloading 
+2. runtime / dynamic / Method overriding 
+
+
+
+
+
+
