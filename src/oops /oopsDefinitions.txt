@@ -1,3 +1,8 @@
+higher level programming concepts: 
+structured programming
+unstructured programming
+OOPS
+
 OOPS: 
 
 Object oriented programming 
@@ -17,10 +22,54 @@ Aggregation
 Composition 
 Association 
 
-POLYMORPHISM: Ability of an object to take on multiple forms 
+ABSTRACTION: Showing essential attributes and hiding "uncessary/irrelevent" implementation details from the users
+ex: customer info 
+essential: full name, address, SSN, contact number 
+uncessary: favorite food, favorite movie, marrital status etc.
 
-1. complile time / static / Method Overloading 
-2. runtime / dynamic / Method overriding 
+It reduces the complexity of the design and allows you to group related classes as sibilings 
+
+Inheritance:
+Inheritance allows a class to inherit common properties from other classes
+
+Types: 
+Single inheritance 
+A <- B 
+Multiple inheritance 
+A <- B , C <- B
+Multilevel inheritance
+A <- B <-C
+Hierarchical inheritance: one base class has more than one subclasses
+vechicle class <- car, van, bike etc.
+Hybrid inheritance = Multiple + Multilevel
+
+superclass? BASECLASS - which is a parent class to some other class 
+subclasses? child class
+
+Abstract Methods & Abstract Class: 
+
+
+POLYMORPHISM: Ability of an object/variable/function to take on multiple forms 
+
+1. complile time / static / Method Overloading : possible to give same METHOD NAME to more than one method within a class 
+but arguments has to be different 
+2. runtime / dynamic / Method overriding : subclass can redefine methods present in parent class but it has to have 
+same name, same signature, same return type
+
+Encapsulation:  Binding of data and code together that works as a single unit
+ex: CLASS (data specificed in one class is hidden from other class according to the access specifiers)
+
+Access specifiers: It determines accessibilty of methods, classes etc. Implementation of Encapsulation is done by this access modifiers
+
+Name       |	Accessibility from own class|	Accessibility from derived class|	Accessibility from other packages|
+Public     | yes | yes | yes |
+Private    | yes | no | no |
+Protected  | yes | yes | no |
+
+
+
+
+
 
 
 

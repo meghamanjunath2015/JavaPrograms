@@ -1,0 +1,20 @@
+Differences: 
+Abstraction vs Enacapsulation 
+abstract class vs interface 
+class vs structure
+
+
+
+
+
+class vs structure
+class is a user defined blueprint from which objects are created. it consists of set of variables and methods that 
+are performed on the object 
+
+structure is user defined collection of variables of different types
+
+class vs object 
+| class is a blueprint | object can be created from a class |
+|An object acts like a variable of the class | Binds methods and data together into a single unit|
+|An object is a physical entity	| A class is a logical entity |
+

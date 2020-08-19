@@ -1,0 +1,12 @@
+1.Can you call the base class method without creating an instance?
+
+Yes, you can call BASE CLASS without Instanciating it if 
+a. If its a static method 
+b. if it is inhertied by some other sub class 
+
+2. limitations of inheritance: 
+a.  Increase in time and effort to execute a program as it requires constant jumping back and forth 
+b. Parent and child class is highly coupled, any modifications made in parent should also be maintained in child class and visa versa
+c. needs careful implementations 
+
+3.
