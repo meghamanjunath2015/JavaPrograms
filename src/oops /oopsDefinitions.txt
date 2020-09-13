@@ -9,7 +9,7 @@ Object oriented programming
 
 Two building blocks are: CLASS and OBJECT 
 
-CLASS: ITs a collection of attributes and methods that define the behaviour of the object 
+CLASS: Its a collection of attributes and methods that define the behaviour of the object 
 object: Instance of a class 
 
 Concepts: 
@@ -29,7 +29,12 @@ uncessary: favorite food, favorite movie, marrital status etc.
 
 It reduces the complexity of the design and allows you to group related classes as sibilings 
 
-Inheritance:
+Data abstraction can be achieved through:
+Abstract class: It consists of abstract methods, they are declared but not defined. If used in some subclass, they needs 
+to be defined in that subclass 
+Interface:
+
+INHERITANCE:
 Inheritance allows a class to inherit common properties from other classes
 
 Types: 
@@ -46,17 +51,15 @@ Hybrid inheritance = Multiple + Multilevel
 superclass? BASECLASS - which is a parent class to some other class 
 subclasses? child class
 
-Abstract Methods & Abstract Class: 
-
-
 POLYMORPHISM: Ability of an object/variable/function to take on multiple forms 
 
 1. complile time / static / Method Overloading : possible to give same METHOD NAME to more than one method within a class 
-but arguments has to be different 
+but arguments has to be different.Simply changing the return type of two methods will not result in overloading
+
 2. runtime / dynamic / Method overriding : subclass can redefine methods present in parent class but it has to have 
 same name, same signature, same return type
 
-Encapsulation:  Binding of data and code together that works as a single unit
+ENCAPSULATION:  Binding of data and code together that works as a single unit
 ex: CLASS (data specificed in one class is hidden from other class according to the access specifiers)
 
 Access specifiers: It determines accessibilty of methods, classes etc. Implementation of Encapsulation is done by this access modifiers
@@ -65,6 +68,29 @@ Name       |	Accessibility from own class|	Accessibility from derived class|	Acc
 Public     | yes | yes | yes |
 Private    | yes | no | no |
 Protected  | yes | yes | no |
+
+constructor:
+A constructor is a special type of method that has the same name as the class and is used to initialize objects of that class.
+
+destructor:
+A destructor is a method that is automatically invoked when an object is destroyed. The destructor recovers the heap space that was allocated to the destroyed object, closes the files and database connections of the object, etc.
+
+Types of constructors
+
+Default constructor: constructor automatically provided by the class as default if no other constructor is defined.
+Parameterized constructor: user defined constructor with parameters
+Copy constructor:creates objects by copying variables from another object(aim is to create a new object from an existing one)
+Static constructor:
+Private constructor:
+
+Garbage collector: GC is an implementation of automatic memory management. The Garbage collector frees up space occupied by objects that are no longer in existence.
+
+ERROR: Errors are problems that should not be encountered by applications ex: divide by 0
+EXCEPTIONS: Conditions that an application might try to catch ex: network connectivity issues 
+
+TRY/BLOCK: A try/ catch block is used to handle exceptions. The try block defines a set of statements that may lead to an error. The catch block basically catches the exception.
+
+FINALLY: A finally block consists of code that is used to execute important code such as closing a connection, etc. It always executes even when an exception is caught
 
 
 

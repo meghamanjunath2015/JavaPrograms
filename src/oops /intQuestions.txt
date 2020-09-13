@@ -9,4 +9,48 @@ a.  Increase in time and effort to execute a program as it requires constant jum
 b. Parent and child class is highly coupled, any modifications made in parent should also be maintained in child class and visa versa
 c. needs careful implementations 
 
-3.
+3.Can you create an instance of an abstract class?
+We cannot instanciate it because there is no complete implementation, HOWEVER
+instance of subclasses can be created if it is inheriting from abstract class
+
+4.Can we overload a static method in Java?
+
+
+5. different types of arguments?
+
+A parameter is a variable used during the declaration of the function or subroutine, and arguments are passed to the function body, and it should match with the parameter defined. There are two types of Arguments.
+
+Call by Value – Value passed will get modified only inside the function, and it returns the same value whatever it is passed into the function.
+Call by Reference – Value passed will get modified in both inside and outside the functions and it returns the same or different value.
+
+There is only call by value in java, not call by reference. 
+class operation{
+    int data=50; 
+
+    void change(int data){
+        data = data+100;
+        //changes will be in the local variable only 
+
+public static void main(String args[]){
+    operation op = new operation();
+    system.out.println("before calling the method" + op.data)
+    op.change(500) -----//call by value 
+    system.out.println("after calling the method" + op.data)
+    }   
+}
+
+//output is 50 for both 
+
+6. SUPER keyword : When you have a variable in child class which is already present in the parent class
+ then in order to access the variable of parent class, you need to use the super keyword.
+
+advantages: 
+1. To access the data members of parent class when both parent and child class has member with same name
+2. To explicitly call the no-argument/parameterized constructor of parent class
+3. To access the method of parent class when a child class has overridden the 
+
+super keyword to access the variables of parent class: 
+super keyword to invoke constructor of parent class: 
+use super keyword in case of method overriding: 
+
+

@@ -18,3 +18,8 @@ class vs object
 |An object acts like a variable of the class | Binds methods and data together into a single unit|
 |An object is a physical entity	| A class is a logical entity |
 
+Abstract Class	VS Interface
+Methods | Can have abstract as well as other methods | Only abstract methods |
+Final Variables | May contain final and non-final variables | Variables declared are final by default |
+Accessibility of Data Members | Can be private, public, etc |	Public by default | 
+
