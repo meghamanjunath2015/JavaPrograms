@@ -47,10 +47,170 @@ public static void main(String args[]){
 advantages: 
 1. To access the data members of parent class when both parent and child class has member with same name
 2. To explicitly call the no-argument/parameterized constructor of parent class
-3. To access the method of parent class when a child class has overridden the 
+3. To access the method of parent class when a child class has overridden that method
 
-super keyword to access the variables of parent class: 
-super keyword to invoke constructor of parent class: 
-use super keyword in case of method overriding: 
+        super keyword to access the variables of parent class: 
+class SuperClass {
+    int num = 100;
+}
 
+class SubClass extends SuperClass{
+    int num = 110;
+    void printNumber(){
+        s.o.p(super.num)
+    }
 
+    psvm(Strings args[]){
+        SubClass obj = new SubClass();
+        obj.printNumber();
+    }
+}
+
+output: 100
+          super keyword to invoke constructor of parent class: 
+class Parentclass
+{
+   Parentclass(){
+	System.out.println("Constructor of parent class");
+   }
+}
+class Subclass extends Parentclass
+{
+   Subclass(){
+	/* Compile implicitly adds super() here as the
+	 *  first statement of this constructor.
+	 */
+	System.out.println("Constructor of child class");
+   }
+   Subclass(int num){
+	/* Even though it is a parameterized constructor.
+	 * The compiler still adds the no-arg super() here
+	 */
+	System.out.println("arg constructor of child class");
+   }
+   void display(){
+	System.out.println("Hello!");
+   }
+   public static void main(String args[]){
+	/* Creating object using default constructor. This 
+	 * will invoke child class constructor, which will 
+	 * invoke parent class constructor
+	 */
+	Subclass obj= new Subclass();
+	//Calling sub class method 
+	obj.display();
+	/* Creating second object using arg constructor
+	 * it will invoke arg constructor of child class which will
+	 * invoke no-arg constructor of parent class automatically 
+	 */
+	Subclass obj2= new Subclass(10);
+	obj2.display();
+   }
+}
+Output:
+
+Constructor of parent class
+Constructor of child class
+Hello!
+Constructor of parent class
+arg constructor of child class
+Hello!
+
+        another example of explicitly calling super: 
+However when we have a constructor in parent class that takes arguments then we can use parameterized super, like super(100); 
+to invoke parameterized constructor of parent class from the constructor of child class.
+
+class Parentclass
+{
+   //no-arg constructor
+   Parentclass(){
+	System.out.println("no-arg constructor of parent class");
+   }
+   //arg or parameterized constructor
+   Parentclass(String str){
+	System.out.println("parameterized constructor of parent class");
+   }
+}
+class Subclass extends Parentclass
+{
+   Subclass(){
+       /* super() must be added to the first statement of constructor 
+	* otherwise you will get a compilation error. Another important 
+	* point to note is that when we explicitly use super in constructor
+	* the compiler doesn't invoke the parent constructor automatically.
+	*/
+	super("Hahaha");
+	System.out.println("Constructor of child class");
+
+   }
+   void display(){
+	System.out.println("Hello");
+   }
+   public static void main(String args[]){		
+	Subclass obj= new Subclass();
+	obj.display();	 
+   }
+}   
+
+Output:
+
+parameterized constructor of parent class
+Constructor of child class
+Hello
+
+        super keyword in case of method overriding: 
+class Parentclass
+{
+   //Overridden method
+   void display(){
+	System.out.println("Parent class method");
+   }
+}
+class Subclass extends Parentclass
+{
+   //Overriding method
+   void display(){
+	System.out.println("Child class method");
+   }
+   void printMsg(){
+	//This would call Overriding method
+	display();
+	//This would call Overridden method
+	super.display();
+   }
+   public static void main(String args[]){		
+	Subclass obj= new Subclass();
+	obj.printMsg(); 
+   }
+}
+Output:
+
+Child class method
+Parent class method
+
+another example where super is not needed if child does not override the parent method 
+
+class Parentclass
+{
+   void display(){
+	System.out.println("Parent class method");
+   }
+}
+class Subclass extends Parentclass
+{
+   void printMsg(){
+	/* This would call method of parent class,
+	 * no need to use super keyword because no other
+	 * method with the same name is present in this class
+	 */
+	display();
+   } 
+   public static void main(String args[]){
+		
+	Subclass obj= new Subclass();
+        obj.printMsg(); 
+   }
+}
+Output:
+
+Parent class method
